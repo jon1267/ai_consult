@@ -59,7 +59,7 @@ class SearchProducts implements Tool
 
         return $products
             ->map(fn ($product) =>
-            "- {$product->name} | Category: {$product->category} | ₹{$product->price} | Stock: {$product->stock}"
+            "- {$product->name} | Category: {$product->category} | \${$product->price} | Stock: {$product->stock}"
             )
             ->implode("\n");
     }
